@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data</title>
+<meta name="description" content="Pooling four public gut microbiome cohorts of immune checkpoint blockade patients shows cohort membership, not treatment response, drives the variance. Includes the open batch_detector tool.">
+
+<meta name="citation_title" content="Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data">
+<meta name="citation_author" content="Garg, Amey">
+<meta name="citation_publication_date" content="2026/10/19">
+<meta name="citation_online_date" content="2026/10/19">
+<meta name="citation_publisher" content="Zenodo">
+<meta name="citation_doi" content="10.5281/zenodo.23484820">
+<meta name="citation_language" content="en">
+<meta name="citation_keywords" content="gut microbiome; immunotherapy; immune checkpoint blockade; batch effects; cohort effects; PERMANOVA; meta-analysis; metagenomics">
+<meta name="citation_abstract_html_url" content="https://ames943.github.io/cohort-effects/">
+<meta name="citation_pdf_url" content="https://ames943.github.io/cohort-effects/Garg_2026_Cohort_Effects_preprint.pdf">
+
+<link rel="canonical" href="https://ames943.github.io/cohort-effects/">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<p class="nav"><a href="../">Amey Garg</a> / Papers</p>
+
+<h1>Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data</h1>
+<p class="authors">Amey Garg</p>
+<p class="meta">Preprint, October 19, 2026 &middot; Extended version of a paper accepted to the IEEE BIBM 2026 Workshop Proceedings; the conference version is the version of record.</p>
+
+<div class="links">
+  <a class="primary" href="Garg_2026_Cohort_Effects_preprint.pdf">PDF</a>
+  <a href="https://doi.org/10.5281/zenodo.23484820">DOI: 10.5281/zenodo.23484820</a>
+  <a href="https://github.com/ames943/batch_detector">Code: batch_detector</a>
+  <a href="https://doi.org/10.5281/zenodo.23226392">Software DOI</a>
+</div>
+
+<section class="abstract">
+<h2>Abstract</h2>
+<p>Researchers often pool public gut microbiome datasets from immunotherapy studies to get around small sample sizes, assuming that adding cohorts adds statistical power faster than it adds differences between studies. We test that assumption. We processed four public shotgun metagenomic cohorts of patients receiving immune checkpoint blockade through one pipeline and pooled them step by step, from 39 to 283 patients. Because the PERMANOVA effect size R<sup>2</sup> is above zero even when there is no real effect, we compared every result with its exact chance expectation. Measured as raw variance explained, cohort membership accounted for 8 to 27 times more variance than treatment response, although much of that ratio comes from sample size alone. At every pooling step, treatment response explained no more variance than chance (within 0.2 percentage points) and was never significant, while cohort membership explained 6.0 to 9.5 percentage points beyond chance (p = 0.001 each time). Classification stayed at chance across three model types, none of six leak-free batch-correction strategies recovered signal, and no genus reached significance in a random-effects meta-analysis. The largest single cohort (n = 165) was also non-significant, although simulation shows it had at least 90% power to detect an effect at its own 95% upper bound; within it, recruiting site alone explained 7.0 percentage points beyond chance. In three tumor genomic cohorts (n = 223), a small but real response effect sat next to a cohort effect about eighteen times larger, so the problem is not specific to microbiome data. We release batch_detector, an open tool that reports chance-corrected cohort and response effects before pooling, and test it on an independent colorectal cancer meta-analysis.</p>
+</section>
+
+<h2>Cite</h2>
+<pre class="cite">Garg, Amey. 2026. "Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data." Preprint, Zenodo. https://doi.org/10.5281/zenodo.23484820</pre>
+</main>
+</body>
+</html>
