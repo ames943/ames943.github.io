@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Amey Garg</title>
-<meta name="description" content="Amey Garg, student at Santa Clara High School. Research in economic history and computational biology.">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="Amey Garg, student at Santa Clara High School. Research in computational biology and economic history.">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <main class="home">
@@ -13,26 +13,37 @@
 <header class="intro">
   <h1>Amey Garg</h1>
   <p class="meta">Santa Clara High School &middot; <a href="https://scholar.google.com/citations?user=0BS0OhEAAAAJ&amp;hl=en">Google Scholar</a> &middot; <a href="https://github.com/ames943">GitHub</a></p>
-  <p>I'm a student at Santa Clara High School interested in computer science and economics. Most of my research starts with a public dataset and a claim people tend to take for granted, and then checks whether the data actually supports it. I write the analysis code for my own projects.</p>
-  <p>Right now I work in two areas. In economic history, I study how bond markets reacted when American states defaulted on their debts in the 1840s, mentored by Thomas J. Sargent (NYU) and George J. Hall (Brandeis). In computational biology, I study why findings from pooled gut microbiome studies of cancer immunotherapy often fail to replicate.</p>
+  <p>I'm a student at Santa Clara High School. I'm interested in computer science and use it in my research in biology and economics.</p>
+  <p>My main project is in computational biology. Studies of gut bacteria and cancer immunotherapy often pool public datasets from several studies to get more patients. I ran four of these datasets through one pipeline and found that which study a patient came from explained far more of the variation than whether the patient responded to treatment. A short version of the paper was accepted to an IEEE BIBM 2026 workshop, and I released the tool I built for it, batch_detector, as open-source Python.</p>
+  <p>I also work on economic history with Thomas J. Sargent (NYU) and George J. Hall (Brandeis), using 1840s bond prices to study what happened to cities when their states defaulted.</p>
 </header>
 
 <section>
   <h2>Research</h2>
 
   <article class="paper">
-    <p class="tags"><span class="tag">Economic history</span><span class="tag">Preprint 2026</span></p>
-    <h3><a href="does-default-stay-local/">Does Default Stay Local? State Default and City Credit in the 1840s</a></h3>
-    <p>When Pennsylvania stopped paying its debts in 1842, did investors also start charging Philadelphia and Pittsburgh more to borrow? Using weekly bond prices from the period, I find they didn't. The state's borrowing costs jumped while its cities' barely moved, which suggests investors judged each government on its own finances.</p>
-    <p class="links-inline"><a href="does-default-stay-local/Garg_2026_Does_Default_Stay_Local.pdf">PDF</a><a href="does-default-stay-local/">Abstract</a><a href="https://doi.org/10.5281/zenodo.23506736">DOI</a><a href="https://github.com/ames943/does-default-stay-local">Code and data</a></p>
+    <p class="tags"><span class="tag">Computational biology</span><span class="tag">IEEE BIBM 2026 Workshop</span></p>
+    <h3><a href="cohort-effects/">Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data</a></h3>
+    <p>Pooling four public gut microbiome cohorts (283 patients on immune checkpoint drugs), the study a sample came from explained 6 to 9.5 percentage points of variation beyond chance. Treatment response explained no more than chance. Classifiers stayed at chance and six batch-correction methods recovered nothing. In three tumor genomic cohorts, the study effect was about eighteen times the response effect.</p>
+    <ul class="btns">
+      <li><a href="cohort-effects/Garg_2026_Cohort_Effects_preprint.pdf">PDF</a></li>
+      <li><a href="cohort-effects/">Abstract</a></li>
+      <li><a href="https://doi.org/10.5281/zenodo.23484820">DOI</a></li>
+      <li><a href="https://github.com/ames943/batch_detector">Code</a></li>
+    </ul>
+    <p class="note">Extended version. The conference paper in the IEEE BIBM 2026 Workshop Proceedings is the version of record.</p>
   </article>
 
   <article class="paper">
-    <p class="tags"><span class="tag">Computational biology</span><span class="tag">IEEE BIBM 2026 Workshop</span></p>
-    <h3><a href="cohort-effects/">Cohort Effects, Not Treatment Response, Dominate Public Immunotherapy Cohorts: Evidence from Microbiome and Tumor Genomic Data</a></h3>
-    <p>Researchers often combine public gut microbiome datasets to get more patients. Across four immunotherapy cohorts (283 patients), the differences between studies were far larger than any link to treatment response, and no correction method recovered a real signal. The paper comes with batch_detector, a tool that checks for this before pooling.</p>
-    <p class="links-inline"><a href="cohort-effects/Garg_2026_Cohort_Effects_preprint.pdf">PDF</a><a href="cohort-effects/">Abstract</a><a href="https://doi.org/10.5281/zenodo.23484820">DOI</a><a href="https://github.com/ames943/batch_detector">Code</a></p>
-    <p class="note">Extended version. The conference paper in the IEEE BIBM 2026 Workshop Proceedings is the version of record.</p>
+    <p class="tags"><span class="tag">Economic history</span><span class="tag">Preprint 2026</span></p>
+    <h3><a href="does-default-stay-local/">Does Default Stay Local? State Default and City Credit in the 1840s</a></h3>
+    <p>When Pennsylvania stopped paying its debts in 1842, its borrowing costs rose. Philadelphia's and Pittsburgh's did not. Using weekly bond prices from the 1830s to the 1850s, I find that investors priced each city on its own finances rather than its state's.</p>
+    <ul class="btns">
+      <li><a href="does-default-stay-local/Garg_2026_Does_Default_Stay_Local.pdf">PDF</a></li>
+      <li><a href="does-default-stay-local/">Abstract</a></li>
+      <li><a href="https://doi.org/10.5281/zenodo.23506736">DOI</a></li>
+      <li><a href="https://github.com/ames943/does-default-stay-local">Code and data</a></li>
+    </ul>
   </article>
 </section>
 
@@ -40,14 +51,25 @@
   <h2>Software</h2>
   <article class="paper">
     <h3><a href="https://github.com/ames943/batch_detector">batch_detector</a></h3>
-    <p>Before you pool several datasets, it reports how much of the variation comes from which study a sample came from versus the outcome you care about, both corrected for chance. <a href="https://doi.org/10.5281/zenodo.23226392">Software DOI</a></p>
+    <p>A single Python file to run before pooling datasets. You give it a table of samples, the study each one came from, and the outcome you care about. It reports how much variation each of those explains, corrected for chance, and returns GO, CAUTION or NO-GO for pooling.</p>
+    <ul class="btns">
+      <li><a href="https://github.com/ames943/batch_detector">GitHub</a></li>
+      <li><a href="https://doi.org/10.5281/zenodo.23226392">Software DOI</a></li>
+    </ul>
+  </article>
+  <article class="paper">
+    <h3><a href="https://github.com/ames943/InfernoTactics">InfernoTactics</a></h3>
+    <p>A reinforcement learning simulation of wildfire containment, built at UCLA COSMOS.</p>
+    <ul class="btns">
+      <li><a href="https://github.com/ames943/InfernoTactics">GitHub</a></li>
+    </ul>
   </article>
 </section>
 
 <section>
   <h2>Updates</h2>
   <ul class="updates">
-    <li><span class="date">Oct 2026</span><span>Posted <a href="does-default-stay-local/">Does Default Stay Local?</a> with full replication code.</span></li>
+    <li><span class="date">Oct 2026</span><span>Posted <a href="does-default-stay-local/">Does Default Stay Local?</a> with the full replication code.</span></li>
     <li><span class="date">Oct 2026</span><span>Posted the extended version of <a href="cohort-effects/">Cohort Effects</a>.</span></li>
     <li><span class="date">Sep 2026</span><span>Cohort Effects accepted to the IEEE BIBM 2026 Workshop.</span></li>
   </ul>
