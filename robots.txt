@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ames943.github.io/sitemap.xml
